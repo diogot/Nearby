@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  Nearby
+//
+//  Created by Diogo Tridapalli on 8/31/15.
+//  Copyright (c) 2015 Diogo Tridapalli. All rights reserved.
+//
+
+#ifndef Nearby_PrefixHeader_pch
+#define Nearby_PrefixHeader_pch
+
+#import "NBAnalytics.h"
+#import "NSError+nb.h"
+
+#endif

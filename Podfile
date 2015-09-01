@@ -6,4 +6,7 @@ plugin 'cocoapods-keys', {
   :project => "Nearby",
   :keys => [
   ]}
+
+pod 'AFNetworking/NSURLSession', '~> 2.6.0'
+pod 'AFNetworking/UIKit', '~> 2.6.0'
   
