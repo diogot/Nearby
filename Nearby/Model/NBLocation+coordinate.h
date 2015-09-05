@@ -8,8 +8,9 @@
 
 #import "NBLocation.h"
 
-#warning DOCs
-
+/**
+ *  Aditions to deal with CLLocationCoordinate2D
+ */
 @interface NBLocation (coordinate)
 
 /**
@@ -45,5 +46,16 @@
  */
 + (CLLocationDistance)distanceBetweenCoodintate:(CLLocationCoordinate2D)coordinate1
                                             and:(CLLocationCoordinate2D)coordinate2;
+
+/**
+ *  Function that compares two CLLocationCoordinate2D within the correct precision.
+ *
+ *  @param coordinate1 CLLocationCoordinate2D
+ *  @param coordinate2 CLLocationCoordinate2D
+ *
+ *  @return @a YES if coodinates are equal or @a NO otherwise
+ */
++ (BOOL)isCoordinate:(CLLocationCoordinate2D)coordinate1
+   equalToCoordinate:(CLLocationCoordinate2D)coordinate2;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBBBD01BD007D2DB09825F36 /* libPods-NearbyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35BF1061F699139964ED7178 /* libPods-NearbyTests.a */; };
 		D1DF12CEE7B6B820CFBE9DA9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F39D40B058C2564C089391 /* libPods.a */; };
 		D9C7246F1B93A79E00B64171 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C7246E1B93A79E00B64171 /* main.m */; };
 		D9C724721B93A79E00B64171 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724711B93A79E00B64171 /* AppDelegate.m */; };
@@ -20,10 +21,14 @@
 		D9C7249D1B93FB3A00B64171 /* NBDeviceLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C7249C1B93FB3A00B64171 /* NBDeviceLocationManager.m */; };
 		D9C724A11B9404D100B64171 /* NBLocation+coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724A01B9404D100B64171 /* NBLocation+coordinate.m */; };
 		D9C724A41B94076D00B64171 /* NBNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724A31B94076D00B64171 /* NBNetworkManager.m */; };
-		D9C724A71B948F3700B64171 /* NSError+nb.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724A61B948F3700B64171 /* NSError+nb.m */; };
+		D9C724A71B948F3700B64171 /* NSError+NB.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724A61B948F3700B64171 /* NSError+NB.m */; };
 		D9C724AC1B94F95A00B64171 /* NBAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724AB1B94F95A00B64171 /* NBAnalytics.m */; };
 		D9C724AF1B95038600B64171 /* NBRouteProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724AE1B95038600B64171 /* NBRouteProvider.m */; };
 		D9C724B21B9506CC00B64171 /* NBLocation+MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724B11B9506CC00B64171 /* NBLocation+MKAnnotation.m */; };
+		D9C724BB1B9A801300B64171 /* NSObject+isEqual.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724BA1B9A801300B64171 /* NSObject+isEqual.m */; };
+		D9C724BE1B9A8A1700B64171 /* NBLocationResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724BD1B9A8A1700B64171 /* NBLocationResponseSerializer.m */; };
+		D9C724C11B9AA10B00B64171 /* NBOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724C01B9AA10B00B64171 /* NBOperation.m */; };
+		D9C724C41B9AA2AB00B64171 /* NBLocationFetchOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724C31B9AA2AB00B64171 /* NBLocationFetchOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35BF1061F699139964ED7178 /* libPods-NearbyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NearbyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		407FAEF48B9A1C86040EEDAA /* Pods-NearbyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearbyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NearbyTests/Pods-NearbyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		550E15575B5A7D53F1CD763D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		756964062136935DE2590CE5 /* Pods-NearbyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearbyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NearbyTests/Pods-NearbyTests.release.xcconfig"; sourceTree = "<group>"; };
 		98A2C773574D3932108A0378 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D9C724691B93A79E00B64171 /* Nearby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nearby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C7246D1B93A79E00B64171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,8 +70,8 @@
 		D9C724A01B9404D100B64171 /* NBLocation+coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NBLocation+coordinate.m"; path = "Model/NBLocation+coordinate.m"; sourceTree = "<group>"; };
 		D9C724A21B94076D00B64171 /* NBNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBNetworkManager.h; path = Network/NBNetworkManager.h; sourceTree = "<group>"; };
 		D9C724A31B94076D00B64171 /* NBNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBNetworkManager.m; path = Network/NBNetworkManager.m; sourceTree = "<group>"; };
-		D9C724A51B948F3700B64171 /* NSError+nb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+nb.h"; path = "Category/NSError+nb.h"; sourceTree = "<group>"; };
-		D9C724A61B948F3700B64171 /* NSError+nb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+nb.m"; path = "Category/NSError+nb.m"; sourceTree = "<group>"; };
+		D9C724A51B948F3700B64171 /* NSError+NB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+NB.h"; path = "Category/NSError+NB.h"; sourceTree = "<group>"; };
+		D9C724A61B948F3700B64171 /* NSError+NB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+NB.m"; path = "Category/NSError+NB.m"; sourceTree = "<group>"; };
 		D9C724A91B9490FD00B64171 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D9C724AA1B94F95A00B64171 /* NBAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBAnalytics.h; path = Other/NBAnalytics.h; sourceTree = "<group>"; };
 		D9C724AB1B94F95A00B64171 /* NBAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBAnalytics.m; path = Other/NBAnalytics.m; sourceTree = "<group>"; };
@@ -71,6 +79,14 @@
 		D9C724AE1B95038600B64171 /* NBRouteProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBRouteProvider.m; path = Other/NBRouteProvider.m; sourceTree = "<group>"; };
 		D9C724B01B9506CC00B64171 /* NBLocation+MKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NBLocation+MKAnnotation.h"; path = "Model/NBLocation+MKAnnotation.h"; sourceTree = "<group>"; };
 		D9C724B11B9506CC00B64171 /* NBLocation+MKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NBLocation+MKAnnotation.m"; path = "Model/NBLocation+MKAnnotation.m"; sourceTree = "<group>"; };
+		D9C724B91B9A801300B64171 /* NSObject+isEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+isEqual.h"; path = "Category/NSObject+isEqual.h"; sourceTree = "<group>"; };
+		D9C724BA1B9A801300B64171 /* NSObject+isEqual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+isEqual.m"; path = "Category/NSObject+isEqual.m"; sourceTree = "<group>"; };
+		D9C724BC1B9A8A1700B64171 /* NBLocationResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBLocationResponseSerializer.h; path = Network/NBLocationResponseSerializer.h; sourceTree = "<group>"; };
+		D9C724BD1B9A8A1700B64171 /* NBLocationResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBLocationResponseSerializer.m; path = Network/NBLocationResponseSerializer.m; sourceTree = "<group>"; };
+		D9C724BF1B9AA10B00B64171 /* NBOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBOperation.h; path = Other/NBOperation.h; sourceTree = "<group>"; };
+		D9C724C01B9AA10B00B64171 /* NBOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBOperation.m; path = Other/NBOperation.m; sourceTree = "<group>"; };
+		D9C724C21B9AA2AB00B64171 /* NBLocationFetchOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBLocationFetchOperation.h; path = Network/NBLocationFetchOperation.h; sourceTree = "<group>"; };
+		D9C724C31B9AA2AB00B64171 /* NBLocationFetchOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBLocationFetchOperation.m; path = Network/NBLocationFetchOperation.m; sourceTree = "<group>"; };
 		E3F39D40B058C2564C089391 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBBD01BD007D2DB09825F36 /* libPods-NearbyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				E3F39D40B058C2564C089391 /* libPods.a */,
+				35BF1061F699139964ED7178 /* libPods-NearbyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,6 +124,8 @@
 			children = (
 				550E15575B5A7D53F1CD763D /* Pods.debug.xcconfig */,
 				98A2C773574D3932108A0378 /* Pods.release.xcconfig */,
+				407FAEF48B9A1C86040EEDAA /* Pods-NearbyTests.debug.xcconfig */,
+				756964062136935DE2590CE5 /* Pods-NearbyTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -140,9 +160,10 @@
 				D9C7249C1B93FB3A00B64171 /* NBDeviceLocationManager.m */,
 				D9C724AD1B95038600B64171 /* NBRouteProvider.h */,
 				D9C724AE1B95038600B64171 /* NBRouteProvider.m */,
-				D9C724A91B9490FD00B64171 /* PrefixHeader.pch */,
 				D9C724AA1B94F95A00B64171 /* NBAnalytics.h */,
 				D9C724AB1B94F95A00B64171 /* NBAnalytics.m */,
+				D9C724BF1B9AA10B00B64171 /* NBOperation.h */,
+				D9C724C01B9AA10B00B64171 /* NBOperation.m */,
 				D9C724A81B948F3E00B64171 /* Category */,
 				D9C724961B93A84500B64171 /* Model */,
 				D9C7249A1B93A8DD00B64171 /* Network */,
@@ -157,6 +178,7 @@
 		D9C7246C1B93A79E00B64171 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D9C724A91B9490FD00B64171 /* PrefixHeader.pch */,
 				D9C7246D1B93A79E00B64171 /* Info.plist */,
 				D9C7246E1B93A79E00B64171 /* main.m */,
 			);
@@ -207,8 +229,12 @@
 			children = (
 				D9C724971B93A8C100B64171 /* NBLocationsFetcher.h */,
 				D9C724981B93A8C100B64171 /* NBLocationsFetcher.m */,
+				D9C724C21B9AA2AB00B64171 /* NBLocationFetchOperation.h */,
+				D9C724C31B9AA2AB00B64171 /* NBLocationFetchOperation.m */,
 				D9C724A21B94076D00B64171 /* NBNetworkManager.h */,
 				D9C724A31B94076D00B64171 /* NBNetworkManager.m */,
+				D9C724BC1B9A8A1700B64171 /* NBLocationResponseSerializer.h */,
+				D9C724BD1B9A8A1700B64171 /* NBLocationResponseSerializer.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -216,8 +242,10 @@
 		D9C724A81B948F3E00B64171 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				D9C724A51B948F3700B64171 /* NSError+nb.h */,
-				D9C724A61B948F3700B64171 /* NSError+nb.m */,
+				D9C724A51B948F3700B64171 /* NSError+NB.h */,
+				D9C724A61B948F3700B64171 /* NSError+NB.m */,
+				D9C724B91B9A801300B64171 /* NSObject+isEqual.h */,
+				D9C724BA1B9A801300B64171 /* NSObject+isEqual.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -248,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9C7248F1B93A79E00B64171 /* Build configuration list for PBXNativeTarget "NearbyTests" */;
 			buildPhases = (
+				31E5ED703FC0B983F72A1966 /* Check Pods Manifest.lock */,
 				D9C7247E1B93A79E00B64171 /* Sources */,
 				D9C7247F1B93A79E00B64171 /* Frameworks */,
 				D9C724801B93A79E00B64171 /* Resources */,
+				4D96D11DE3C8A7D0CF9D9103 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,6 +351,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		31E5ED703FC0B983F72A1966 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		45779D9C47D65C136CAC6E32 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,6 +379,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D96D11DE3C8A7D0CF9D9103 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NearbyTests/Pods-NearbyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9D7922013682CE161B3BFA17 /* Check Pods Manifest.lock */ = {
@@ -359,13 +419,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C7249D1B93FB3A00B64171 /* NBDeviceLocationManager.m in Sources */,
+				D9C724C11B9AA10B00B64171 /* NBOperation.m in Sources */,
 				D9C724951B93A83F00B64171 /* NBLocation.m in Sources */,
 				D9C724AC1B94F95A00B64171 /* NBAnalytics.m in Sources */,
 				D9C724B21B9506CC00B64171 /* NBLocation+MKAnnotation.m in Sources */,
 				D9C724AF1B95038600B64171 /* NBRouteProvider.m in Sources */,
 				D9C724A41B94076D00B64171 /* NBNetworkManager.m in Sources */,
-				D9C724A71B948F3700B64171 /* NSError+nb.m in Sources */,
+				D9C724A71B948F3700B64171 /* NSError+NB.m in Sources */,
+				D9C724BE1B9A8A1700B64171 /* NBLocationResponseSerializer.m in Sources */,
+				D9C724BB1B9A801300B64171 /* NSObject+isEqual.m in Sources */,
 				D9C724751B93A79E00B64171 /* ViewController.m in Sources */,
+				D9C724C41B9AA2AB00B64171 /* NBLocationFetchOperation.m in Sources */,
 				D9C724991B93A8C100B64171 /* NBLocationsFetcher.m in Sources */,
 				D9C724A11B9404D100B64171 /* NBLocation+coordinate.m in Sources */,
 				D9C724721B93A79E00B64171 /* AppDelegate.m in Sources */,
@@ -521,6 +585,7 @@
 		};
 		D9C724901B93A79E00B64171 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 407FAEF48B9A1C86040EEDAA /* Pods-NearbyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -540,6 +605,7 @@
 		};
 		D9C724911B93A79E00B64171 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 756964062136935DE2590CE5 /* Pods-NearbyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

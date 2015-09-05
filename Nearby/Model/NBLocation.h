@@ -11,7 +11,7 @@
 
 #warning Docs
 
-@interface NBLocation : NSObject
+@interface NBLocation : NSObject <NSCopying>
 
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
@@ -22,5 +22,7 @@
 - (instancetype)initWithName:(NSString *)name
                   coordinate:(CLLocationCoordinate2D)coordinate
 NS_DESIGNATED_INITIALIZER;
+
+- (BOOL)isEqualToLocation:(NBLocation *)location;
 
 @end

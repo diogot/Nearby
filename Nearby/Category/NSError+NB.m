@@ -1,19 +1,19 @@
 //
-//  NSError+nb.m
+//  NSError+NB.m
 //  Nearby
 //
 //  Created by Diogo Tridapalli on 8/31/15.
 //  Copyright (c) 2015 Diogo Tridapalli. All rights reserved.
 //
 
-#import "NSError+nb.h"
+#import "NSError+NB.h"
 
 NSString * const NBErrorDomain = @"NBErrorDomain";
 
-@implementation NSError (nb)
+@implementation NSError (NB)
 
 + (NSError *)nb_errorWithDomain:(NSString *)domain
-                           code:(NSInteger)code
+                           code:(NBErrorCodes)code
                     description:(NSString *)description
                          reason:(NSString *)reason
                      suggestion:(NSString *)suggestion
@@ -43,7 +43,7 @@ NSString * const NBErrorDomain = @"NBErrorDomain";
     return error;
 }
 
-+ (instancetype)nb_errorWithCode:(NSInteger)code
++ (instancetype)nb_errorWithCode:(NBErrorCodes)code
             localizedDescription:(NSString *)description
 {
     NSString *domain = NBErrorDomain;

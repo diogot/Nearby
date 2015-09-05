@@ -9,11 +9,22 @@
 @import Foundation;
 @import CoreLocation.CLLocation;
 
-#warning Docs
+/**
+ *  Class to deal with network request
+ */
 @interface NBNetworkManager : NSObject
 
-+ (void)fetchLocationsForCoordinate:(CLLocationCoordinate2D)coordinate
-                               page:(NSInteger)page
-                  completionHandler:(void (^)(NSDictionary *apiDict, NSError *error))completionHandler;
+/**
+ *  Fetch NBlocations nearby a specified coordinate, up to 50 locations per page
+ *
+ *  @param coordinate        CLLocationCoordinate2D
+ *  @param page              results pagination, start with 0
+ *  @param completionHandler block executed when the task finishes
+ *
+ *  @return A running NSURLSessionTask or @a nil if coordinate is invalid
+ */
++ (NSURLSessionTask *)fetchLocationsForCoordinate:(CLLocationCoordinate2D)coordinate
+                                             page:(NSUInteger)page
+                                completionHandler:(void (^)(NSSet *locations, NSError *error))completionHandler;
 
 @end

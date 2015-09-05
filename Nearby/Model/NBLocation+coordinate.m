@@ -24,6 +24,24 @@
     return string;
 }
 
++ (BOOL)isCoordinate:(CLLocationCoordinate2D)coord1
+   equalToCoordinate:(CLLocationCoordinate2D)coord2
+{
+    BOOL isEqual = NO;
+    
+    BOOL coord1IsValid = CLLocationCoordinate2DIsValid(coord1);
+    BOOL coord2IsValid = CLLocationCoordinate2DIsValid(coord2);
+    
+    if (coord1IsValid && coord2IsValid) {
+        isEqual = (fabs(coord1.latitude  - coord2.latitude ) < 1e-6) &&
+        (fabs(coord1.longitude - coord2.longitude) < 1e-6);
+    } else if (coord2IsValid == NO && coord2IsValid == NO) {
+        isEqual = YES;
+    }
+    
+    return isEqual;
+}
+
 + (CLLocationCoordinate2D)coordinateFromLatitude:(id)latitudeObj
                                        longitude:(id)longitudeObj
 {
@@ -31,9 +49,9 @@
     
     if (latitudeObj != nil && longitudeObj != nil) {
         BOOL isLatitudeValid = [latitudeObj isKindOfClass:[NSNumber class]] ||
-        [latitudeObj isKindOfClass:[NSString class]];
+                               [latitudeObj isKindOfClass:[NSString class]];
         BOOL isLongitudeValid = [longitudeObj isKindOfClass:[NSNumber class]] ||
-        [longitudeObj isKindOfClass:[NSString class]];
+                                [longitudeObj isKindOfClass:[NSString class]];
         
         if (isLatitudeValid  && isLongitudeValid) {
             CLLocationDegrees latitude = [latitudeObj doubleValue];

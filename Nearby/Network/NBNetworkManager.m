@@ -8,11 +8,15 @@
 
 #import "NBNetworkManager.h"
 #import <AFHTTPSessionManager.h>
+#import "NBLocationResponseSerializer.h"
 #import <Keys/NearbyKeys.h>
 #import <AFNetworkActivityIndicatorManager.h>
 #import "NBLocation+coordinate.h"
+#import "NSError+nb.h"
 
-#warning REVIEW
+NSTimeInterval const kRequestTimeout = 30;
+
+NSInteger const kResultsPerPage = 50;
 
 @interface NBNetworkManager ()
 
@@ -48,35 +52,43 @@
 {
     NSURLSessionConfiguration *config =
     [NSURLSessionConfiguration defaultSessionConfiguration];
-    config.timeoutIntervalForRequest = 30;
+    config.timeoutIntervalForRequest = kRequestTimeout;
     _session = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:config];
-    _session.responseSerializer = [AFJSONResponseSerializer new];
+    _session.responseSerializer = [NBLocationResponseSerializer new];
     
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 }
 
-+ (void)fetchLocationsForCoordinate:(CLLocationCoordinate2D)coordinate
-                               page:(NSInteger)page
-                  completionHandler:(void (^)(NSDictionary *apiDict, NSError *error))completionHandler
++ (NSURLSessionTask *)fetchLocationsForCoordinate:(CLLocationCoordinate2D)coordinate
+                               page:(NSUInteger)page
+                  completionHandler:(void (^)(NSSet *locations, NSError *error))completionHandler
 {
-    [[self sharedManager] fetchLocationsForCoordinate:coordinate
-                                                 page:page
-                                    completionHandler:completionHandler];
+    return [[self sharedManager] fetchLocationsForCoordinate:coordinate
+                                                        page:page
+                                           completionHandler:completionHandler];
 }
 
 
-- (void)fetchLocationsForCoordinate:(CLLocationCoordinate2D)coordinate
-                               page:(NSInteger)page
-                  completionHandler:(void (^)(NSDictionary *apiDict, NSError *error))completionHandler
+- (NSURLSessionTask *)fetchLocationsForCoordinate:(CLLocationCoordinate2D)coordinate
+                               page:(NSUInteger)page
+                  completionHandler:(void (^)(NSSet *locations, NSError *error))completionHandler
 {
-    // https://developer.foursquare.com/docs/venues/explore
-    NSString *URLString = @"https://api.foursquare.com/v2/venues/explore";
+    if (CLLocationCoordinate2DIsValid(coordinate) == NO) {
+        if (completionHandler) {
+            completionHandler(nil, [self missingParameterError]);
+        }
+        
+        return nil;
+    }
     
-    NSString *offset = [NSString stringWithFormat:@"%ld", (long)(page)*50];
+    // https://developer.foursquare.com/docs/venues/explore
+    NSString * const URLString = @"https://api.foursquare.com/v2/venues/explore";
+    
+    NSString *offset = [NSString stringWithFormat:@"%ld", (long)(page)*kResultsPerPage];
     NearbyKeys *keys = [NearbyKeys new];
     NSDictionary *params = @{@"ll": [NBLocation stringWithCoordinate:coordinate],
-                             @"section": @"sights",
-                             @"limit": @"50",
+//                             @"section": @"sights",  // This might resctrict too much
+                             @"limit": @(kResultsPerPage),
                              @"offset": offset,
                              @"time": @"any",
                              @"client_id": [keys foursquareClientID],
@@ -84,11 +96,20 @@
                              @"v": @"20150901",
                              @"m": @"foursquare"};
 
+    NSURLSessionTask *task =
     [self.session GET:URLString parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         completionHandler(responseObject, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         completionHandler(nil, error);
     }];
+    
+    return task;
+}
+
+- (NSError *)missingParameterError
+{
+    return [NSError nb_errorWithCode:NBMissingParameterErrorCode
+                localizedDescription:NSLocalizedString(@"NBNetworkManager.MissingParameterDescription", )];
 }
 
 @end

@@ -62,6 +62,10 @@
     }
     
     NSArray *locations = self.locations;
+    if (locations.count == 0) {
+        return;
+    }
+    
     [map addAnnotations:locations];
     
     NSInteger points = locations.count;
@@ -123,17 +127,16 @@
 - (void)fetchLocationsNearby:(NBLocation *)location
 {
     __weak typeof(self) weakSelf = self;
-    
     [NBLocationsFetcher fetchLocationsForCoordinate:location.coordinate completionHandler:^(NSArray *locations, NSError *error) {
         if (error) {
-            [self showError:error];
+            [weakSelf showError:error];
             LogSoftCrashWithError(error);
             
             return;
         }
         [NBRouteProvider routeForLocations:locations startingAtLocation:location completionHandler:^(NSArray *path, NSError *error) {
             if (error) {
-                [self showError:error];
+                [weakSelf showError:error];
                 LogSoftCrashWithError(error);
                 
                 return;

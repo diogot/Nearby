@@ -10,6 +10,14 @@
 #define Nearby_PrefixHeader_pch
 
 #import "NBAnalytics.h"
-#import "NSError+nb.h"
+#import "NSError+NB.h"
+
+#ifdef DEBUG
+#define NBLogD(x,...) NSLog(@"[%s:%d] %s: %@", __FILE__, __LINE__, __PRETTY_FUNCTION__, [NSString stringWithFormat:(x), ##__VA_ARGS__])
+#define NBLog NBLogD
+#else
+#define NBLog(...) NSLog(__VA_ARGS__)
+#define NBLogD(...)
+#endif
 
 #endif

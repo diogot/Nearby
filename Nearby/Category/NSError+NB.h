@@ -1,5 +1,5 @@
 //
-//  NSError+nb.h
+//  NSError+NB.h
 //  Nearby
 //
 //  Created by Diogo Tridapalli on 8/31/15.
@@ -12,7 +12,13 @@
 
 extern NSString * const NBErrorDomain;
 
-@interface NSError (nb)
+typedef NS_ENUM(NSInteger, NBErrorCodes) {
+    NBParsingErrorCode = 1,
+    NBNoLocationErrorCode,
+    NBMissingParameterErrorCode
+};
+
+@interface NSError (NB)
 
 /**
  *  Create an NSError with decription, reason and suggestion
@@ -26,12 +32,12 @@ extern NSString * const NBErrorDomain;
  *  @return NSError
  */
 + (instancetype)nb_errorWithDomain:(NSString *)domain
-                              code:(NSInteger)code
+                              code:(NBErrorCodes)code
                        description:(NSString *)description
                             reason:(NSString *)reason
                         suggestion:(NSString *)suggestion;
 
-+ (instancetype)nb_errorWithCode:(NSInteger)code
++ (instancetype)nb_errorWithCode:(NBErrorCodes)code
             localizedDescription:(NSString *)description;
 
 @end

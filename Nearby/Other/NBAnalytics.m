@@ -42,7 +42,7 @@
         }
     }
     
-    NSLog(@"SOFT CRASH: %@", name);
+    NBLogD(@"SOFT CRASH: %@", name);
 }
 
 + (NSString *)shornameFromCrashName:(NSString *)name
