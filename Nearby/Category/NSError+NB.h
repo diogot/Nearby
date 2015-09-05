@@ -15,7 +15,8 @@ extern NSString * const NBErrorDomain;
 typedef NS_ENUM(NSInteger, NBErrorCodes) {
     NBParsingErrorCode = 1,
     NBNoLocationErrorCode,
-    NBMissingParameterErrorCode
+    NBMissingParameterErrorCode,
+    NBRoutePlanErrorCode
 };
 
 @interface NSError (NB)

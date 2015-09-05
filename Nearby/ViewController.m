@@ -13,7 +13,7 @@
 #import "NBLocation+MKAnnotation.h"
 #import "NBDeviceLocationManager.h"
 #import "NBLocationsFetcher.h"
-#import "NBRouteProvider.h"
+#import "NBRoutePlanner.h"
 
 @interface ViewController () <MKMapViewDelegate>
 
@@ -134,7 +134,7 @@
             
             return;
         }
-        [NBRouteProvider routeForLocations:locations startingAtLocation:location completionHandler:^(NSArray *path, NSError *error) {
+        [NBRoutePlanner routeForLocations:locations startingAtLocation:location completionHandler:^(NSArray *path, NSError *error) {
             if (error) {
                 [weakSelf showError:error];
                 LogSoftCrashWithError(error);
