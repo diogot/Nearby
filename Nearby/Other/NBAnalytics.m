@@ -43,6 +43,8 @@
     }
     
     NBLogD(@"SOFT CRASH: %@", name);
+
+    // Add an external analytics event here
 }
 
 + (NSString *)shornameFromCrashName:(NSString *)name
