@@ -19,6 +19,7 @@ DEPENDENCIES:
   - AFNetworking/NSURLSession (~> 2.6.0)
   - AFNetworking/UIKit (~> 2.6.0)
   - Keys (from `Pods/CocoaPodsKeys`)
+  - Reveal-iOS-SDK
 
 EXTERNAL SOURCES:
   Keys:
@@ -27,5 +28,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
+  Reveal-iOS-SDK: c9c55cad2729c85f6ced415f1b21857c9a2d8ef9
 
 COCOAPODS: 0.38.2

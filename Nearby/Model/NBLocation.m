@@ -11,18 +11,27 @@
 
 @implementation NBLocation
 
-+ (instancetype)locationWithName:(NSString *)name
-                      coordinate:(CLLocationCoordinate2D)coordinate
++ (instancetype)locationWithTitle:(NSString *)title
+                         category:(NSString *)category
+                           reason:(NSString *)reason
+                       coordinate:(CLLocationCoordinate2D)coordinate
 {
-    return [[self alloc] initWithName:name coordinate:coordinate];
+    return [[self alloc] initWithTitle:title
+                              category:category
+                                reason:reason
+                            coordinate:coordinate];
 }
 
-- (instancetype)initWithName:(NSString *)name
-                  coordinate:(CLLocationCoordinate2D)coordinate
+- (instancetype)initWithTitle:(NSString *)title
+                     category:(NSString *)category
+                       reason:(NSString *)reason
+                   coordinate:(CLLocationCoordinate2D)coordinate
 {
     self = [super init];
     if (self) {
-        _name = name;
+        _title = title;
+        _category = category;
+        _reason = reason;
         _coordinate = coordinate;
     }
     
@@ -36,12 +45,16 @@
         return NO;
     }
     
-    BOOL equalName = [self nb_isEqualString:self.name
-                                   toString:location.name];
+    BOOL equalTitle = [self nb_isEqualString:self.title
+                                   toString:location.title];
+    BOOL equalCategory = [self nb_isEqualString:self.category
+                                       toString:location.category];
+    BOOL equalReason = [self nb_isEqualString:self.reason
+                                     toString:location.reason];
     BOOL equalCoordinate = [NBLocation isCoordinate:self.coordinate
                                   equalToCoordinate:location.coordinate];
     
-    return equalName && equalCoordinate;
+    return equalTitle && equalCategory && equalReason && equalCoordinate;
 }
 
 #pragma mark - NSObject
@@ -51,8 +64,10 @@
     NSString *desc;
     
     desc = [NSString stringWithFormat:
-            @"name = %@; coordinate = %@",
-            self.name,
+            @"title = %@;  category = %@; reason = %@; coordinate = %@;",
+            self.title,
+            self.category,
+            self.reason,
             [NBLocation stringWithCoordinate:self.coordinate]];
     
     return desc;
@@ -87,8 +102,12 @@
 {
     NSUInteger hash;
     
+    //  Not the best way to do it, but works for now, best way require a bitwise rotation:
+    //  https://www.mikeash.com/pyblog/friday-qa-2010-06-18-implementing-equality-and-hashing.html
     hash =
-    [self.name hash] ^
+    [self.title hash] ^
+    [self.category hash] ^
+    [self.reason hash] ^
     (NSUInteger)self.coordinate.latitude ^
     (NSUInteger)self.coordinate.longitude;
     
@@ -101,5 +120,42 @@
 {
     return self;
 }
+
+#pragma mark - NSSecureCoding
+
++ (BOOL)supportsSecureCoding
+{
+    return YES;
+}
+
+static NSString * const kLatitude = @"latitude";
+static NSString * const kLongitude = @"longintude";
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    CLLocationCoordinate2D coordinate =
+    CLLocationCoordinate2DMake([aDecoder decodeDoubleForKey:kLatitude],
+                               [aDecoder decodeDoubleForKey:kLongitude]);
+
+    self = [self initWithTitle:[aDecoder decodeObjectOfClass:[NSString class]
+                                                      forKey:NSStringFromSelector(@selector(title))]
+                      category:[aDecoder decodeObjectOfClass:[NSString class]
+                                                      forKey:NSStringFromSelector(@selector(category))]
+                        reason:[aDecoder decodeObjectOfClass:[NSString class]
+                                                      forKey:NSStringFromSelector(@selector(reason))]
+                   coordinate:coordinate];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.title forKey:NSStringFromSelector(@selector(title))];
+    [aCoder encodeObject:self.category forKey:NSStringFromSelector(@selector(category))];
+    [aCoder encodeObject:self.reason forKey:NSStringFromSelector(@selector(reason))];
+    [aCoder encodeDouble:self.coordinate.latitude forKey:kLatitude];
+    [aCoder encodeDouble:self.coordinate.longitude forKey:kLongitude];
+}
+
 
 @end

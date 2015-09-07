@@ -8,21 +8,40 @@
 
 @import Foundation;
 
-#warning Docs
-
+/**
+ *  Default app domain error
+ */
 extern NSString * const NBErrorDomain;
 
-typedef NS_ENUM(NSInteger, NBErrorCodes) {
+/**
+ *  App error codes
+ */
+typedef NS_ENUM(NSInteger, NBErrorCodes){
+    /**
+     *  Parsing error
+     */
     NBParsingErrorCode = 1,
+    /**
+     *  No location error
+     */
     NBNoLocationErrorCode,
+    /**
+     *  Missing parameter error
+     */
     NBMissingParameterErrorCode,
+    /**
+     *  Error on route planner
+     */
     NBRoutePlanErrorCode
 };
 
+/**
+ *  NSError category to facilitate create errors
+ */
 @interface NSError (NB)
 
 /**
- *  Create an NSError with decription, reason and suggestion
+ *  Create a NSError with decription, reason and suggestion
  *
  *  @param domain      NSString with the domain error
  *  @param code        NSInteger code error
@@ -38,6 +57,14 @@ typedef NS_ENUM(NSInteger, NBErrorCodes) {
                             reason:(NSString *)reason
                         suggestion:(NSString *)suggestion;
 
+/**
+ *  Create a NSError with a NBErrorCodes in NBErrorDomain with description
+ *
+ *  @param code        NBErrorCodes
+ *  @param description NSString
+ *
+ *  @return NSError
+ */
 + (instancetype)nb_errorWithCode:(NBErrorCodes)code
             localizedDescription:(NSString *)description;
 

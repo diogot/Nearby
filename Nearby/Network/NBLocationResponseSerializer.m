@@ -70,6 +70,11 @@
                 continue;
             }
             
+            
+            // TODO: improve error handling
+            NSString *category = [venue[@"categories"] firstObject][@"name"];
+            NSString *reason = [item[@"reasons"][@"items" ] firstObject][@"summary"];
+            
             NSDictionary *locationDict = venue[@"location"];
             if ([locationDict isKindOfClass:[NSDictionary class]] == NO) {
                 LogSoftCrash();
@@ -87,8 +92,10 @@
                 continue;
             }
             
-            NBLocation *location = [NBLocation locationWithName:name
-                                                     coordinate:coordinate];
+            NBLocation *location = [NBLocation locationWithTitle:name
+                                                        category:category
+                                                          reason:reason
+                                                      coordinate:coordinate];
             [locations addObject:location];
         }
     }

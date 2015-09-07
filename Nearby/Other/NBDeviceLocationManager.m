@@ -100,8 +100,10 @@ NSString * const NBDeviceLocationManagerDidFailErrorKey =
 {
     CLLocation *location = self.locationManager.location;
     
-    NBLocation *myLocation = [NBLocation locationWithName:NSLocalizedString(@"Me", nil)
-                                               coordinate:location.coordinate];
+    NBLocation *myLocation = [NBLocation locationWithTitle:NSLocalizedString(@"Me", nil)
+                                                  category:nil
+                                                    reason:nil
+                                                coordinate:location.coordinate];
     
     return myLocation;
 }

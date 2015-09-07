@@ -10,9 +10,11 @@
 		BBBBD01BD007D2DB09825F36 /* libPods-NearbyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35BF1061F699139964ED7178 /* libPods-NearbyTests.a */; };
 		D1DF12CEE7B6B820CFBE9DA9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F39D40B058C2564C089391 /* libPods.a */; };
 		D97DBC9F1B9B91320092B1C7 /* NBRoutePlanOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBC9E1B9B91320092B1C7 /* NBRoutePlanOperation.m */; };
+		D97DBCA31B9C78740092B1C7 /* NBMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBCA21B9C78740092B1C7 /* NBMapViewController.m */; };
+		D97DBCA61B9C9C3D0092B1C7 /* NBRouteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBCA51B9C9C3D0092B1C7 /* NBRouteListViewController.m */; };
+		D97DBCA91B9CAA5E0092B1C7 /* NBLocationInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBCA81B9CAA5E0092B1C7 /* NBLocationInfoViewCell.m */; };
 		D9C7246F1B93A79E00B64171 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C7246E1B93A79E00B64171 /* main.m */; };
 		D9C724721B93A79E00B64171 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724711B93A79E00B64171 /* AppDelegate.m */; };
-		D9C724751B93A79E00B64171 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724741B93A79E00B64171 /* ViewController.m */; };
 		D9C724781B93A79E00B64171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C724761B93A79E00B64171 /* Main.storyboard */; };
 		D9C7247A1B93A79E00B64171 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C724791B93A79E00B64171 /* Images.xcassets */; };
 		D9C7247D1B93A79E00B64171 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C7247B1B93A79E00B64171 /* LaunchScreen.xib */; };
@@ -25,7 +27,6 @@
 		D9C724A71B948F3700B64171 /* NSError+NB.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724A61B948F3700B64171 /* NSError+NB.m */; };
 		D9C724AC1B94F95A00B64171 /* NBAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724AB1B94F95A00B64171 /* NBAnalytics.m */; };
 		D9C724AF1B95038600B64171 /* NBRoutePlanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724AE1B95038600B64171 /* NBRoutePlanner.m */; };
-		D9C724B21B9506CC00B64171 /* NBLocation+MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724B11B9506CC00B64171 /* NBLocation+MKAnnotation.m */; };
 		D9C724BB1B9A801300B64171 /* NSObject+isEqual.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724BA1B9A801300B64171 /* NSObject+isEqual.m */; };
 		D9C724BE1B9A8A1700B64171 /* NBLocationResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724BD1B9A8A1700B64171 /* NBLocationResponseSerializer.m */; };
 		D9C724C11B9AA10B00B64171 /* NBOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724C01B9AA10B00B64171 /* NBOperation.m */; };
@@ -50,13 +51,17 @@
 		98A2C773574D3932108A0378 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D97DBC9D1B9B91320092B1C7 /* NBRoutePlanOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBRoutePlanOperation.h; path = Other/NBRoutePlanOperation.h; sourceTree = "<group>"; };
 		D97DBC9E1B9B91320092B1C7 /* NBRoutePlanOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBRoutePlanOperation.m; path = Other/NBRoutePlanOperation.m; sourceTree = "<group>"; };
+		D97DBCA11B9C78740092B1C7 /* NBMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBMapViewController.h; path = Controllers/NBMapViewController.h; sourceTree = "<group>"; };
+		D97DBCA21B9C78740092B1C7 /* NBMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBMapViewController.m; path = Controllers/NBMapViewController.m; sourceTree = "<group>"; };
+		D97DBCA41B9C9C3D0092B1C7 /* NBRouteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBRouteListViewController.h; path = Controllers/NBRouteListViewController.h; sourceTree = "<group>"; };
+		D97DBCA51B9C9C3D0092B1C7 /* NBRouteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBRouteListViewController.m; path = Controllers/NBRouteListViewController.m; sourceTree = "<group>"; };
+		D97DBCA71B9CAA5E0092B1C7 /* NBLocationInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBLocationInfoViewCell.h; path = View/NBLocationInfoViewCell.h; sourceTree = "<group>"; };
+		D97DBCA81B9CAA5E0092B1C7 /* NBLocationInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBLocationInfoViewCell.m; path = View/NBLocationInfoViewCell.m; sourceTree = "<group>"; };
 		D9C724691B93A79E00B64171 /* Nearby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nearby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C7246D1B93A79E00B64171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9C7246E1B93A79E00B64171 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9C724701B93A79E00B64171 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D9C724711B93A79E00B64171 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D9C724731B93A79E00B64171 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D9C724741B93A79E00B64171 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D9C724771B93A79E00B64171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9C724791B93A79E00B64171 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D9C7247C1B93A79E00B64171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,8 +85,6 @@
 		D9C724AB1B94F95A00B64171 /* NBAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBAnalytics.m; path = Other/NBAnalytics.m; sourceTree = "<group>"; };
 		D9C724AD1B95038600B64171 /* NBRoutePlanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBRoutePlanner.h; path = Other/NBRoutePlanner.h; sourceTree = "<group>"; };
 		D9C724AE1B95038600B64171 /* NBRoutePlanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBRoutePlanner.m; path = Other/NBRoutePlanner.m; sourceTree = "<group>"; };
-		D9C724B01B9506CC00B64171 /* NBLocation+MKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NBLocation+MKAnnotation.h"; path = "Model/NBLocation+MKAnnotation.h"; sourceTree = "<group>"; };
-		D9C724B11B9506CC00B64171 /* NBLocation+MKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NBLocation+MKAnnotation.m"; path = "Model/NBLocation+MKAnnotation.m"; sourceTree = "<group>"; };
 		D9C724B91B9A801300B64171 /* NSObject+isEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+isEqual.h"; path = "Category/NSObject+isEqual.h"; sourceTree = "<group>"; };
 		D9C724BA1B9A801300B64171 /* NSObject+isEqual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+isEqual.m"; path = "Category/NSObject+isEqual.m"; sourceTree = "<group>"; };
 		D9C724BC1B9A8A1700B64171 /* NBLocationResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBLocationResponseSerializer.h; path = Network/NBLocationResponseSerializer.h; sourceTree = "<group>"; };
@@ -182,6 +185,19 @@
 			name = "Services and infrastructure";
 			sourceTree = "<group>";
 		};
+		D97DBCA01B9C772B0092B1C7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D97DBCA11B9C78740092B1C7 /* NBMapViewController.h */,
+				D97DBCA21B9C78740092B1C7 /* NBMapViewController.m */,
+				D97DBCA41B9C9C3D0092B1C7 /* NBRouteListViewController.h */,
+				D97DBCA51B9C9C3D0092B1C7 /* NBRouteListViewController.m */,
+				D97DBCA71B9CAA5E0092B1C7 /* NBLocationInfoViewCell.h */,
+				D97DBCA81B9CAA5E0092B1C7 /* NBLocationInfoViewCell.m */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
 		D9C724601B93A79E00B64171 = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				D9C724921B93A82400B64171 /* App */,
-				D9C724731B93A79E00B64171 /* ViewController.h */,
-				D9C724741B93A79E00B64171 /* ViewController.m */,
+				D97DBCA01B9C772B0092B1C7 /* Screens */,
 				D9C724A81B948F3E00B64171 /* Category */,
 				D9C724961B93A84500B64171 /* Model */,
 				D9C7249A1B93A8DD00B64171 /* Network */,
@@ -263,8 +278,6 @@
 				D9C724941B93A83F00B64171 /* NBLocation.m */,
 				D9C7249F1B9404D100B64171 /* NBLocation+coordinate.h */,
 				D9C724A01B9404D100B64171 /* NBLocation+coordinate.m */,
-				D9C724B01B9506CC00B64171 /* NBLocation+MKAnnotation.h */,
-				D9C724B11B9506CC00B64171 /* NBLocation+MKAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -465,16 +478,17 @@
 			files = (
 				D9C7249D1B93FB3A00B64171 /* NBDeviceLocationManager.m in Sources */,
 				D9C724C11B9AA10B00B64171 /* NBOperation.m in Sources */,
+				D97DBCA61B9C9C3D0092B1C7 /* NBRouteListViewController.m in Sources */,
 				D9C724951B93A83F00B64171 /* NBLocation.m in Sources */,
 				D9C724AC1B94F95A00B64171 /* NBAnalytics.m in Sources */,
 				D97DBC9F1B9B91320092B1C7 /* NBRoutePlanOperation.m in Sources */,
-				D9C724B21B9506CC00B64171 /* NBLocation+MKAnnotation.m in Sources */,
+				D97DBCA31B9C78740092B1C7 /* NBMapViewController.m in Sources */,
+				D97DBCA91B9CAA5E0092B1C7 /* NBLocationInfoViewCell.m in Sources */,
 				D9C724AF1B95038600B64171 /* NBRoutePlanner.m in Sources */,
 				D9C724A41B94076D00B64171 /* NBNetworkManager.m in Sources */,
 				D9C724A71B948F3700B64171 /* NSError+NB.m in Sources */,
 				D9C724BE1B9A8A1700B64171 /* NBLocationResponseSerializer.m in Sources */,
 				D9C724BB1B9A801300B64171 /* NSObject+isEqual.m in Sources */,
-				D9C724751B93A79E00B64171 /* ViewController.m in Sources */,
 				D9C724C41B9AA2AB00B64171 /* NBLocationFetchOperation.m in Sources */,
 				D9C724991B93A8C100B64171 /* NBLocationsFetcher.m in Sources */,
 				D9C724A11B9404D100B64171 /* NBLocation+coordinate.m in Sources */,
