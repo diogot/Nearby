@@ -1,0 +1,51 @@
+/* Localizable.strings
+  Nearby
+
+  Created by Diogo Tridapalli on 9/7/15.
+  Copyright (c) 2015 Diogo Tridapalli. All rights reserved. */
+
+/* No comment provided by engineer. */
+"Me" = "Me";
+
+/* No comment provided by engineer. */
+"NBLocationResponseSerializer.ParsingErrorDescription" = "Unexpected error";
+
+/* No comment provided by engineer. */
+"NBMapViewController.GPSDeniedPopup.Message" = "In order to discover locations nearby you need to activate location services";
+
+/* No comment provided by engineer. */
+"NBMapViewController.GPSDeniedPopup.Title" = "Location needed";
+
+/* No comment provided by engineer. */
+"NBMapViewController.Title" = "Nearby";
+
+/* No comment provided by engineer. */
+"NBNetworkManager.MissingParameterDescription" = "Unexpected error";
+
+/* No comment provided by engineer. */
+"NBNocationFetchOperation.NoLocationDescription" = "No locations found";
+
+/* No comment provided by engineer. */
+"NBRoutePlanOperation.MissingStartRouteDescription" = "Unexpected error";
+
+/* No comment provided by engineer. */
+"NNMapViewController.GPSDeniedPopup.GoToSetting" = "Go to settings";
+
+/* No comment provided by engineer. */
+"NNMapViewController.GPSDeniedPopup.NotNow" = "Not now";
+
+/* No comment provided by engineer. */
+"NNMapViewController.GPSDisabledPopup.Message" = "Location services disabled";
+
+/* No comment provided by engineer. */
+"NNMapViewController.GPSDisabledPopup.Title" = "Location needed";
+
+/* No comment provided by engineer. */
+"NNMapViewController.GPSRestrictedPopup.Message" = "Location access restricted";
+
+/* No comment provided by engineer. */
+"NNMapViewController.GPSRestrictedPopup.Title" = "Location needed";
+
+/* No comment provided by engineer. */
+"Ok" = "Ok";
+

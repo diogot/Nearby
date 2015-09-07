@@ -13,6 +13,7 @@
 		D97DBCA31B9C78740092B1C7 /* NBMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBCA21B9C78740092B1C7 /* NBMapViewController.m */; };
 		D97DBCA61B9C9C3D0092B1C7 /* NBRouteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBCA51B9C9C3D0092B1C7 /* NBRouteListViewController.m */; };
 		D97DBCA91B9CAA5E0092B1C7 /* NBLocationInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBCA81B9CAA5E0092B1C7 /* NBLocationInfoViewCell.m */; };
+		D97DBCAF1B9D64160092B1C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D97DBCAD1B9D64160092B1C7 /* Localizable.strings */; };
 		D9C7246F1B93A79E00B64171 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C7246E1B93A79E00B64171 /* main.m */; };
 		D9C724721B93A79E00B64171 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C724711B93A79E00B64171 /* AppDelegate.m */; };
 		D9C724781B93A79E00B64171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C724761B93A79E00B64171 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		D97DBCA51B9C9C3D0092B1C7 /* NBRouteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBRouteListViewController.m; path = Controllers/NBRouteListViewController.m; sourceTree = "<group>"; };
 		D97DBCA71B9CAA5E0092B1C7 /* NBLocationInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NBLocationInfoViewCell.h; path = View/NBLocationInfoViewCell.h; sourceTree = "<group>"; };
 		D97DBCA81B9CAA5E0092B1C7 /* NBLocationInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NBLocationInfoViewCell.m; path = View/NBLocationInfoViewCell.m; sourceTree = "<group>"; };
+		D97DBCAE1B9D64160092B1C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Nearby/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D9C724691B93A79E00B64171 /* Nearby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nearby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C7246D1B93A79E00B64171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9C7246E1B93A79E00B64171 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				D9C724A91B9490FD00B64171 /* PrefixHeader.pch */,
 				D9C7246D1B93A79E00B64171 /* Info.plist */,
 				D9C7246E1B93A79E00B64171 /* main.m */,
+				D97DBCAD1B9D64160092B1C7 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C724781B93A79E00B64171 /* Main.storyboard in Resources */,
+				D97DBCAF1B9D64160092B1C7 /* Localizable.strings in Resources */,
 				D9C7247D1B93A79E00B64171 /* LaunchScreen.xib in Resources */,
 				D9C7247A1B93A79E00B64171 /* Images.xcassets in Resources */,
 			);
@@ -516,6 +520,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D97DBCAD1B9D64160092B1C7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D97DBCAE1B9D64160092B1C7 /* Base */,
+			);
+			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		D9C724761B93A79E00B64171 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
