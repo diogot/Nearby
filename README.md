@@ -8,9 +8,12 @@
 `$ (sudo) gem install cocoapods`
 
 ### [CoocaPods Keys](https://github.com/orta/cocoapods-keys)
-`$ (sudo) gem install cocoapods-keys`
-`$ pod keys set FoursquareClientID <KEY>`
-`$ pod keys set FoursquareClientSecret <KEY>`
+
+```
+$ (sudo) gem install cocoapods-keys
+$ pod keys set FoursquareClientID <KEY>
+$ pod keys set FoursquareClientSecret <KEY>
+```
 
 #### Possible issue in CocoaPods-Keys instalation
 
