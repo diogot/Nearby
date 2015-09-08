@@ -90,7 +90,7 @@
     layout.itemSize = size;
     [layout invalidateLayout];
     
-#warning TODO: offset need to change also
+    // TODO: fix offset on rotation
 }
 
 #pragma mark - UICollectionViewDataSource

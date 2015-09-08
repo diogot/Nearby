@@ -8,8 +8,9 @@
 
 @import Foundation;
 
-#warning DOCs
-
+/**
+ *  Category to help isEqual<Object>
+ */
 @interface NSObject (isEqual)
 
 - (BOOL)nb_isEqualString:(NSString *)a toString:(NSString *)b;
